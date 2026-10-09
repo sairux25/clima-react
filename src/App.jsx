@@ -79,7 +79,9 @@ function App() {
                 {' · '}{describirClima(clima.datos.current.weather_code)}
                 {' · '}viento {clima.datos.current.wind_speed_10m} km/h
               </p>
-
+              <div className="bg-amber-50 rounded p-2">
+                <p>Esta semana: máxima {Math.max(...clima.datos.daily.temperature_2m_max)} °C, mínima {Math.min(...clima.datos.daily.temperature_2m_min)} °C. El día más caluroso es el {clima.datos.daily.time[clima.datos.daily.temperature_2m_max.indexOf(Math.max(...clima.datos.daily.temperature_2m_max))]}</p>
+              </div>
               <div className="grid grid-cols-7 gap-1 text-center text-xs">
                 {clima.datos.daily.time.map((fecha, i) => (
                   <div key={fecha} className="border border-slate-200 rounded p-1">
