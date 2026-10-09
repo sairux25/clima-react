@@ -40,13 +40,16 @@ function App() {
           value={texto}
           onChange={e => setTexto(e.target.value)}
         />
-        <button class="px-3 py-1 rounded border border-slate-300"
-        onClick={() => {
-          setTexto('')
-          setCiudad(null)
-          entrada.current.focus()
-        }}
-        >Limpiar</button>
+        <button 
+          className="px-3 py-1 rounded border border-slate-300"
+          onClick={() => {
+            setTexto('')
+            setCiudad(null)
+            entrada.current.focus()
+          }}
+        >
+          Limpiar
+        </button>
       </div>
 
       {urlCiudades && (
